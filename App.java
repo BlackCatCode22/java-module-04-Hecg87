@@ -1,17 +1,16 @@
-package dennisMohle.myZoo.com;
+package tJavaModule04spr25;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("\n\n Welcome to My Zoo Program\n\n");
+        System.out.println("\n\n Welcome to the Fresno Zoo Web Program\n\n");
         System.out.println("\n Number of animals is: " + Animal.numOfAnimals);
 
         // local variables
-        String name;
         String species;
         int age;
 
@@ -19,7 +18,7 @@ public class App {
         ArrayList<Animal> animals = new ArrayList<>();
 
         // Open an external file, parse it line by line, and get age and species
-        String filePath = "C:/2024_Spring/midtermFiles/arrivingAnimals.txt";
+        String filePath = "/C://Users//Hector//Downloads//arrivingAnimals.txt/";
         File file = new File(filePath);
 
         try (Scanner scanner = new Scanner(file)) {
@@ -39,6 +38,7 @@ public class App {
                     for (int i=0; i<5; i++) {
                         System.out.println("theParts[" + i + "] is " + theParts[i]);
                     }
+
                     age = Integer.parseInt(theParts[0]);
                     species = theParts[4];
 
@@ -62,5 +62,14 @@ public class App {
         }
         System.out.println("\n Number of animals is: " + Animal.numOfAnimals);
 
+        try (BufferedReader reader = new BufferedReader(new FileReader("C:/Users/Hector/Downloads/arrivingAnimals.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // Process each line
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 }

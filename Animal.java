@@ -1,13 +1,13 @@
-package dennisMohle.myZoo.com;
+package tJavaModule04spr25;
 
 public class Animal {
 
-    // Animal Class attributes
+    // // Attributes to hold the details of an individual animal.
     private String animalName;
     private String species;
     private int age;
 
-    // Create a static attribute that belongs to the Animal class.
+    /// Static attribute to keep track of the number of Animal objects created.
     public static int numOfAnimals = 0;
 
     // Animal Class constructors.
@@ -53,3 +53,4 @@ public class Animal {
 
 
 }
+
